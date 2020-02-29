@@ -1,5 +1,8 @@
-import sys
+import click
 
 
-def run():
-    print('\n'.join(sys.path))
+@click.command()
+@click.argument('name')
+@click.option('--greeting', '-g')
+def run(name, greeting):
+    click.echo("{}, {}".format(greeting, name))
