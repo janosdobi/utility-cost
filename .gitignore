@@ -1,5 +1,4 @@
 .idea
 venv
 
-uc/drive/credentials.json
-token.pickle
+secrets
