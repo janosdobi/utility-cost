@@ -2,7 +2,8 @@ import click
 
 
 @click.command()
-@click.argument('name')
-@click.option('--greeting', '-g')
-def run(name, greeting):
-    click.echo("{}, {}".format(greeting, name))
+@click.argument('file_path')
+def run(file_path):
+    with open(file_path) as f:
+        s = f.read()
+    click.echo(s)
